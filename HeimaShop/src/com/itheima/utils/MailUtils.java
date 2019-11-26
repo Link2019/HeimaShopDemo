@@ -1,17 +1,11 @@
 package com.itheima.utils;
 
-import java.util.Properties;
-
-import javax.mail.Authenticator;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
+import javax.mail.*;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMessage.RecipientType;
+import java.util.Properties;
 
 public class MailUtils {
 
@@ -27,7 +21,7 @@ public class MailUtils {
 		// 创建验证器
 		Authenticator auth = new Authenticator() {
 			public PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("haohao_itcast", "hao12345");
+				return new PasswordAuthentication("waynexz", "a123456");
 			}
 		};
 
@@ -36,7 +30,7 @@ public class MailUtils {
 		// 2.创建一个Message，它相当于是邮件内容
 		Message message = new MimeMessage(session);
 
-		message.setFrom(new InternetAddress("haohao_itcast@126.com")); // 设置发送者
+		message.setFrom(new InternetAddress("waynexz@126.com")); // 设置发送者
 
 		message.setRecipient(RecipientType.TO, new InternetAddress(email)); // 设置发送方式与接收者
 
